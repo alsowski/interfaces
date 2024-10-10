@@ -15,20 +15,24 @@
 }
 .container__header{
     /* Añadir aquí Flex y Align y/o justify */
-
-
-    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid rgba(226,225,226, 0.8);    
+    justify-content: space-between;
 }
 
 .container__logo{
     /* Añadir aquí Flex */
-    
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
     padding: 10px;
     margin-left: 20px;
     color: black;
     text-shadow: 1px 1px 0px gray;
     text-transform: uppercase;
+    margin: 50px;
 }
 /* flex-grow: 0  --> valor por defecto y así cada caja ocupa el espacio que toque. */
 /* flex-grow: 1  --> cada elemento ocupa el mismo espacio del tamaño disponible. */
@@ -41,16 +45,18 @@
 
 .header__menu{
     /* Añadir aquí Flex */
-
-
+    display: flex;
+    justify-content: right;
     height: 100%;
 }
 .menu__list{
     /* Añadir aquí Flex y Align y/o justify */
-
-
+    display: flex;
+    justify-content: space-between;
+    align-content: right;
     height: 100%;
     list-style: none;
+    margin: 75px;
 }
 .menu__list a{
     text-transform: uppercase;
@@ -71,20 +77,20 @@
 /* contenido */
 .content{
     /* Añadir aquí Flex y Align y/o justify */
-
-
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .content__projects{
     /* Añadir aquí Flex y Align y/o justify */
-
-
+    display: flex;
+    float: right;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 .projects__project{
     /* Añadir aquí Flex */
-
-
+    flex-basis: 23%;
     margin-bottom: 25px;
     margin-right: 20px;
     border: 1px solid #ccc;
@@ -119,8 +125,8 @@
 /* barra lateral */
 .content__lateral{
     /* Añadir aquí Flex */
-
-
+    flex-basis: 300px;
+    float: left;
     margin-right: 30px;
     padding: 15px;
 }
@@ -167,14 +173,12 @@
 .content__footer{
     /* Añadir aquí Flex y Align y/o justify */
 
-
     height: 120px;
     border-top: 1px solid rgba(226,225,226, 0.8);
 }
 .footer__logoFooter{
     /* Añadir aquí Flex y order */
-
-
+    margin: 30px;
     padding: 10px;
     margin-left: 20px;
     font-family: Helvetica, Arial,  sans-serif;
@@ -191,7 +195,7 @@
 
 .footer__info{
     /* Añadir aquí Flex y Order */
-
+    margin: -70px;
     opacity: 0.7;
     margin-left: 20px;
 }
