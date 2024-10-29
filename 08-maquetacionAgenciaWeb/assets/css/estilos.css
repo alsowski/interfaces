@@ -1,14 +1,15 @@
 /* Iniciamos estilos personalizados  */
 /* Definición Variables
  definimos familia de fuente que voy a utilizar */
-:root{
+:root {
     --mx-width: 1320px;
-    --color-text-body:  #525260; /* cambio de black a este color */
+    --color-text-body: #525260;
+    /* cambio de black a este color */
     --color-primary: #5956e9;
     --color-secondary: #fff;
     --color-banner: #2522BA;
     --color-text-btn: #0d6efd;
-    --colog-bg-btn: #ffdc60;
+    --color-bg-btn: #ffdc60;
     --color-subtitle: #c75c6f;
     --color-title: #292930;
     --color-bg-services: #f8f8f8;
@@ -21,7 +22,7 @@
 
 
 /* Estilos Generales */
-html{
+html {
     /* para un tema de accesibilidad y poder trabajar con rem */
     /* font-size: 10px; */
     /* Accesibilidad,... si el usuario nos cambia el tamaño de fuente */
@@ -29,12 +30,14 @@ html{
     overflow-x: hidden;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
-    font-size: 1.6rem; /* serán 16px porque he asignado font-size a 10px */
+    font-size: 1.6rem;
+    /* serán 16px porque he asignado font-size a 10px */
     font-family: 'DM Sans', sans-serif;
-    font-weight: 400; /* grosor de la fuente, +/- tamaño normal */
+    font-weight: 400;
+    /* grosor de la fuente, +/- tamaño normal */
     line-height: 1.5;
     color: var(--color-text-body);
 }
@@ -42,69 +45,76 @@ body{
 /* Estructura */
 /* a nivel de layout toda mi arquitectura está definida en 1 única columna
 No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
-.layout{
+.layout {
     width: 100%;
     min-width: var(--mx-width);
 }
 
 /* Estilos menú navegación */
-.layout__menu{
+.layout__menu {
     width: 100%;
-    padding: 3.5rem 3rem; /* padding superior y lateral */
+    padding: 3.5rem 3rem;
+    /* padding superior y lateral */
 }
-.menu__navbar{
+
+.menu__navbar {
     /* Flex + aling/justify */
     display: grid;
     grid-template-columns: 1fr 0fr 1fr;
 }
 
-.navbar__logo{
-    width:187px; /* no utilizo rem para que se mantenga el tamaño */
+.navbar__logo {
+    width: 187px;
+    /* no utilizo rem para que se mantenga el tamaño */
 }
-.nav__list{
+
+.nav__list {
     /* Flex + aling/justify */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
-.nav__item{
+
+.nav__item {
     /* position */
     position: relative;
     margin: 0 2.4rem;
 }
-.nav__title{
+
+.nav__title {
     /* ubicamos el título y el icono */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    /* postion */
+    /* position */
     position: relative;
     line-height: 6rem;
     font-weight: 500;
     color: var(--color-text-body);
-    /*efecto*/
+    /* efecto */
     transition: all 300ms ease-in-out;
 }
 
-.nav__title i{
+.nav__title i {
     margin-left: 5px;
 }
 
-.nav__icon{
+.nav__icon {
     font-size: 1rem;
     font-weight: bold;
-    padding-left: 0.2rem; /* margen interior con la opción del menú */
+    padding-left: 0.2rem;
+    /* margen interior con la opción del menú */
     vertical-align: middle;
 }
 
 /* efecto */
-.nav__title:hover{
+.nav__title:hover {
     color: var(--color-primary);
     transform: scale(1.1);
 }
 
-/* psudoelemento para subrayado en el menu */
-.nav__title::before{
+/* pseudoelemento para subrayado en el menu */
+.nav__title::before {
     content: "";
     position: absolute;
     height: 0.2rem;
@@ -113,55 +123,58 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     left: 0;
     width: 0%;
     opacity: 0;
-    transition: all 300ms linear;
+    transition: all 350ms linear;
 }
 
-.nav__title:hover::before{
+.nav__title:hover::before {
     width: 100%;
     opacity: 1;
 }
 
-.nav__submenu{
+.nav__submenu {
     /* position */
     display: block;
     position: absolute;
     top: 100%;
     left: 2rem;
-    
+
     min-width: 19rem;
     padding: 1.5rem 1rem;
     background-color: var(--color-secondary);
-    box-shadow: 0px 13px 48px 0 rgba(0,0,0,15%);
-    
+    box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 15%);
+
     /* visibility, opacity y efecto */
     opacity: 0;
     /* visibility: hidden; */
     transition: all 300ms ease-in-out;
 }
 
-.submenu__item{
-    /* efecto */ 
+.submenu__item {
+    /* efecto */
     opacity: 0;
     transform: translateX(3rem);
     transition: all 500ms ease-in-out;
 }
 
 /* efecto */
-.submenu__item:nth-child(1){
+.submenu__item:nth-child(1) {
     transition-delay: 100ms;
 }
-.submenu__item:nth-child(2){
+
+.submenu__item:nth-child(2) {
     transition-delay: 200ms;
 }
-.submenu__item:nth-child(3){
+
+.submenu__item:nth-child(3) {
     transition-delay: 300ms;
 }
-.submenu__item:nth-child(4){
+
+.submenu__item:nth-child(4) {
     transition-delay: 400ms;
 }
 
-.submenu__title{
-    /* position */ 
+.submenu__title {
+    /* position */
     position: relative;
 
     font-size: 1.4rem;
@@ -176,32 +189,38 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 
 /* efectos varios */
-.nav__item:hover>.nav__submenu{
+.nav__item:hover>.nav__submenu {
+    /* .nav__title:hover>.nav__submenu{ */
     opacity: 1;
     /* visibility: visible; */
     z-index: 10;
     left: 0;
 }
 
-.nav__item:hover>.nav__submenu>.submenu__item{
+.nav__item:hover>.nav__submenu>.submenu__item {
     opacity: 1;
     transform: translateX(0);
 }
 
-.submenu__title:hover{
+.submenu__title:hover {
     color: var(--color-primary);
     transform: scale(1.1);
 }
 
-.submenu__item:before{
-    content: "HOLA";
+.submenu__item::before {
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0.5rem;
     opacity: 0;
     left: 35%;
     transition: all 300ms linear;
 }
 
 /* Estilos para el Banner */
-.layout__banner{
+.layout__banner {
     /* position */
     position: relative;
 
@@ -217,7 +236,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     z-index: 1;
     overflow: hidden;
 }
-.banner__content{
+
+.banner__content {
     /* position */
     position: relative;
     display: inline-block;
@@ -226,12 +246,14 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     padding: 0 1.5rem;
     z-index: 3;
 }
-.banner__title{
+
+.banner__title {
     font-size: 8rem;
     font-weight: 700;
     color: var(--color-secondary);
 }
-.banner__btn{
+
+.banner__btn {
     display: inline-block;
     padding: 2.8rem 4.5rem;
     border-radius: 20px;
@@ -245,234 +267,433 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     /* efecto */
     transition: all 300ms ease-in-out;
 }
+
 /* efecto */
-.banner__btn:hover{
-    
+.banner__btn:hover {
+    background-color: var(--colog-bg-btn);
 }
 
-.shapes__item{
+.shapes__item {
     /* position y z-index */
-    
+    position: absolute;
+    z-index: 5;
     pointer-events: none;
 }
-.shapes__item--shape1{
+
+.shapes__item--shape1 {
     /* position y animación */
+    top: 0;
+    right: 0;
+    animation-name: muestraDesdeDerecha;
+    animation-duration: 2s;
 }
 
-.shapes__item--shape2{
-    /* position y animación */
+@keyframes muestraDesdeDerecha {
+    from {
+        transform: translateX(70%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
-.shapes__item--shape3{
+.shapes__item--shape2 {
     /* position y animación */
+    bottom: 0;
+    left: 0;
+    animation-name: muestraDesdeIzquierda;
+    animation-duration: 2s;
+    z-index: 2;
 }
 
-.shapes__item--shape4{
-    /* position y animación */
+@keyframes muestraDesdeIzquierda {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
-.shapes__item--shape4 .shapes__img{
+
+.shapes__item--shape3 {
+    /* position y animación */
+    top: 50%;
+    right: 50%;
+    z-index: 4;
+    animation: mueveShape3 20s infinite;
+}
+
+@keyframes mueveShape3 {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    33% {
+        transform: translateX(50px) translateY(-200px);
+    }
+
+    66% {
+        transform: translateX(800px) translateY(0%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+.shapes__item--shape4 {
+    /* position y animación */
+    top: 50%;
+    right: 50%;
+    z-index: 4;
+    animation: mueveShape4 20s infinite;
+}
+
+@keyframes mueveShape4 {
+    0% {
+        transform: translateX(500%) translateY(-300%);
+    }
+
+    33% {
+        transform: translateX(400px) translateY(-200px);
+    }
+
+    66% {
+        transform: translateX(-800px) translateY(0%);
+    }
+
+    100% {
+        transform: translateX(500%) translateY(-300%);
+    }
+}
+
+.shapes__item--shape4 .shapes__img {
     opacity: 0.5;
     width: 7.5rem;
 }
 
 
-.shapes__item--shape5{
+.shapes__item--shape5 {
     /* position y animación */
+    /* position y animación */
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    animation: mueveShape5 15s infinite;
 }
 
-.shapes__item--shape6{
-    /* position y animación */
+@keyframes mueveShape5 {
+    0% {
+        transform: translateX(0%) translateY(200%);
+    }
+
+    33% {
+        transform: translateX(600) translateY(-500px);
+    }
+
+    66% {
+        transform: translateX(-400px) translateY(0%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(200%);
+    }
 }
-.shapes__item--shape7{
+
+.shapes__item--shape6 {
     /* position y animación */
+    /* position y animación */
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    animation: mueveShape6 10s infinite;
+}
+
+@keyframes mueveShape6 {
+    0% {
+        transform: translateX(-200%) translateY(200%);
+    }
+
+    33% {
+        transform: translateX(-1500%) translateY(-300px);
+    }
+
+    66% {
+        transform: translateX(-2500px) translateY(150%);
+    }
+
+    100% {
+        transform: translateX(-200%) translateY(200%);
+    }
+}
+
+.shapes__item--shape7 {
+    /* position y animación */
+    top: 0%;
+    right: 0%;
+    z-index: 4;
+    animation-name: muestraDesdeArriba;
+    animation-duration: 2s;
+}
+
+@keyframes muestraDesdeArriba {
+    from {
+        transform: translateY(-70%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* Estilos sección Servicios */
-.layout__services{
+.layout__services {
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     margin: 14rem 10rem;
     margin-bottom: 4rem;
     /* border: 1px solid red; */
 }
-.services__container{
+
+.services__container {
     max-width: var(--mx-width);
     margin: 0 auto;
 }
-.services__header{
+
+.services__header {
     margin-bottom: 2rem;
     text-align: left;
 }
+
 .services__subtitle,
 .projects__subtitle,
 .stats__subtitle,
 .reviews__subtitle,
 .clients__subtitle,
-.news__subtitle{
+.news__subtitle {
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-subtitle);
     margin-bottom: 1.5rem;
 }
+
 .services__title,
 .projects__title,
 .stats__title,
 .reviews__title,
-.news__title{
+.news__title {
     font-size: 6.7rem;
     font-weight: 500;
     line-height: 1.2;
     color: var(--color-title);
 }
-.services__list{
-    /* flex */
 
-    gap: 3rem; /* separación entre los elementos */
+.services__list {
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3rem;
+    /* separación entre los elementos */
 }
-.services__service{
-    /* flex */
+
+.services__service {
+    /* grid */
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
 
     height: 100%;
     padding: 5rem 4rem;
     margin-bottom: 4rem;
     border-radius: 3rem;
-    background: linear-gradient(180deg, var(--color-bg-services), rgba(255,255,255,0));
+    background: linear-gradient(180deg, var(--color-bg-services), rgba(255, 255, 255, 0));
     background-color: var(--color-secondary);
     border: 1px solid;
-    border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255,255,255,0));
+    border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255, 255, 255, 0));
     /* efecto */
-
+    transition: all 300ms linear;
 }
 
-.service__container-img{
+.service__service:hover {
+    background-color: var(--color-bg-services);
+}
+
+.service__container-img {
     margin-right: 2.5rem;
     max-width: 8.5rem;
     /* Relacionado con flex grow y flex basis */
+    transition: all 500ms ease-in-out;
 }
-.service__content{
+
+.service__img:hover {
+    transform: scale(1.2);
+}
+
+.service__content {
     /* Relacionado con flex grow y flex basis */
+
 }
-.service__title{
+
+.service__title {
     color: var(--color-title);
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 3rem;
     /* efecto */
+    transition: all 500ms linear;
 }
-.service__description{
+
+.service__description {
     overflow: hidden;
     font-size: 1.7rem;
     margin-bottom: 4rem;
 }
-.service__more{
+
+.service__more {
     /* position */
+    position: relative;
 
     font-weight: 500;
     font-size: 1.7rem;
     padding-left: 5rem;
     /* efecto */
+    transition: all 500ms linear;
 }
 
 /* pseudoelemento before */
+.service__more::before{
+    content: "";
+    width: 5%;
+    height: 0.2rem;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    /*efecto*/
+    transition: all 500ms linear;
+}
+
+.service__more:hover::before{
+    background-color: var(--color-primary);
+}
 
 .service__more:hover,
-.service__title:hover{
-    color: var(--color-primary);
-}
-.service__more:hover::before{
+.service__title:hover {
     color: var(--color-primary);
 }
 
 /* para generar el escalonado de las tarjetas de servicios */
-.services__service--bottom{
-    
+.services__service--bottom {
+    margin-top: 200px;
 }
-.services__service--middle{
-    
+
+.services__service--middle {
+    margin-top: 100px;
+
 }
-.services__service--top{
-    
+
+.services__service--top {
+    /* margin-top: 0px; */
 }
 
 /* coloco a las formas detrás de los servicios */
-.service-shapes__item{
+.service-shapes__item {
     /* position y z-index */
+    position: absolute;
+    z-index: -1;
 
     pointer-events: none;
 }
-.service-shapes--shape1{
+
+.service-shapes--shape1 {
     /* position */
 }
-.service-shapes--shape2{
+
+.service-shapes--shape2 {
     /* position */
     opacity: 0.6;
 }
-.service-shapes--shape3{
+
+.service-shapes--shape3 {
     /* position y animación */
 
 }
 
 /* Estilos para la sección de Proyectos */
-.layout__projects{
+.layout__projects {
     /* position y z-index */
 
     background-color: var(--color-bg-projects);
     padding: 14rem 10rem;
 
 }
-.projects__container{
+
+.projects__container {
     max-width: var(--mx-width);
     margin: 0 auto;
 }
-.projects__header{
+
+.projects__header {
     margin-bottom: 4rem;
 }
-.projects__subtitle{
+
+.projects__subtitle {
     text-transform: capitalize;
 }
-.projects__categories{
+
+.projects__categories {
     /* Flex */
 
     gap: 7rem;
     margin-bottom: 5.5rem;
 }
-.categories__item{
+
+.categories__item {
     /* position */
 
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     padding: 0.8rem 0;
-    /* efecto */ 
-
-}
-
-.projects__all{
-    /* flex */
-
-    gap: 4rem 7rem;
-}
-.projects__project{
-    width: calc(50% - 3.5rem); /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
-}
-.project__container-img{
-    width: 100%;
-    border-radius: 3rem 3rem 0 0;
-    overflow: hidden;
-}
-.project__img{
-    width:100%;
     /* efecto */
 
 }
 
-.project__content{
+.projects__all {
+    /* flex */
+
+    gap: 4rem 7rem;
+}
+
+.projects__project {
+    width: calc(50% - 3.5rem);
+    /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
+}
+
+.project__container-img {
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    overflow: hidden;
+}
+
+.project__img {
+    width: 100%;
+    /* efecto */
+
+}
+
+.project__content {
     padding: 4rem 5rem;
     background-color: var(--color-secondary);
     border-radius: 0 0 30px 30px;
 }
-.project__title{
+
+.project__title {
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.2;
@@ -481,27 +702,31 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     /* efecto */
 }
 
-.project__tags{
+.project__tags {
     font-size: 1.7rem;
 }
-.project-shapes__item{
+
+.project-shapes__item {
     /* position y z-index */
 
     pointer-events: none;
 }
-.project-shapes--shape1{
+
+.project-shapes--shape1 {
     /* position */
-    
+
     opacity: 0.5;
 }
-.project-shapes--shape2{
+
+.project-shapes--shape2 {
     /* position */
 
     opacity: 0.5;
     /* animación */
 
 }
-.project-shapes--shape3{
+
+.project-shapes--shape3 {
     /* position */
 
     opacity: 0.8;
@@ -510,58 +735,68 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 /* Estilos para estadísticas y Mejores clientes */
 .layout__stats,
-.layout__clients{
+.layout__clients {
     background-color: var(--color-bg-dark);
     padding: 14rem 10rem;
 }
+
 .stats__container,
-.clients__container{
+.clients__container {
     max-width: var(--mx-width);
     margin: 0 auto;
 }
-.stats__header{
+
+.stats__header {
     text-align: center !important;
 }
+
 .stats__title,
-.clients__title{
+.clients__title {
     color: var(--color-secondary);
     font-size: 6.4rem;
     margin-bottom: 3rem;
 }
+
 .stats__description,
-.clients__description{
+.clients__description {
     font-size: 2rem;
     width: 48%;
     margin: 0 auto 4rem;
     color: var(--color-text-description);
 }
-.stats__progress{
+
+.stats__progress {
     /* Flex */
-    
+
     gap: 3rem;
 }
-.stats__stat{
+
+.stats__stat {
     width: 25%;
     text-align: center;
     padding: 7rem 2rem;
     border-radius: 2rem;
-    border: 1px solid transparent; /* inapreciable */
+    border: 1px solid transparent;
+    /* inapreciable */
 }
+
 /* efecto */
 
-.stat__icon>img{
+.stat__icon>img {
     margin: 0 auto;
     text-align: center;
 }
-.stat__count{
-    display:inline-block;
+
+.stat__count {
+    display: inline-block;
     text-align: center;
     font-size: 6.4rem;
     font-weight: 500;
     color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
-.stat__title{
+
+.stat__title {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
@@ -570,142 +805,167 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 
 /* Estilos para Reseñas */
-.layout__reviews{
+.layout__reviews {
     /* position y z-index */
 
     padding-top: 7rem;
     padding-bottom: 5rem;
 }
-.reviews__container{
+
+.reviews__container {
     /* Flex */
 
     max-width: var(--mx-width);
     margin: 0 auto;
     gap: 2rem;
 }
-.reviews__header{
+
+.reviews__header {
     text-align: left;
     margin-bottom: 3rem;
 }
+
 .reviews__description,
-.news__description{
+.news__description {
     margin: 2rem 0;
     width: 50%;
     font-size: 2rem;
 }
-.reviews__content{
+
+.reviews__content {
     /* Flex + align */
 
     gap: 2rem;
 }
-.reviews__review{
+
+.reviews__review {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.review__company{
+
+.review__company {
     display: inline-block;
     margin-bottom: 3rem;
 }
-.review__description{
+
+.review__description {
     font-size: 2.4rem;
     line-height: 1.2;
     color: var(--color-bg-dark);
     margin-bottom: 4rem;
 }
-.review__author{
+
+.review__author {
     /* Flex */
 
 }
-.author__container-img{
+
+.author__container-img {
     border-radius: 90px;
     overflow: hidden;
-    width:10%;
+    width: 10%;
 }
-.author__name{
-    display: block; /* creo un salto de línea */
+
+.author__name {
+    display: block;
+    /* creo un salto de línea */
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--color-bg-dark);
     margin-bottom: 0.3rem;
     margin-left: 2rem;
 }
-.author__description{
+
+.author__description {
     display: block;
     font-size: 1.5rem;
     color: var(--color-text-description);
     opacity: 0.9;
     margin-left: 2rem;
 }
-.review-shapes__item{
+
+.review-shapes__item {
     /* position + z-index */
     pointer-events: none;
 }
 
 /* Estilos zona Mejores Clientes */
-.layout__clients{
+.layout__clients {
     /* position + z-index */
 
 }
-.clients__header{
+
+.clients__header {
     text-align: left;
 }
-.clients__title{
+
+.clients__title {
     width: 50%;
     line-height: 1.2;
     font-weight: 500;
 }
-.clients__description{
+
+.clients__description {
     width: 40%;
     text-align: left;
     margin: 0;
     margin-bottom: 6rem;
 }
-.clients__logos{
+
+.clients__logos {
     /* Flex */
 
     gap: 3rem;
 }
-.clients__item{
+
+.clients__item {
     /* Flex-basis */
 
 }
-.clients__img{
+
+.clients__img {
     filter: grayscale(25%);
     opacity: 0.5;
     /* efecto */
 }
 
-.client-shapes__item{
+.client-shapes__item {
     /* position + z-index */
 
 }
 
 /* Estilos últimas noticias */
-.layout__news{
+.layout__news {
     /* position + z-index */
 
     padding: 14rem 0;
 }
-.news__container{
+
+.news__container {
     max-width: var(--mx-width);
     margin: 0 auto;
 }
-.news__header{
+
+.news__header {
     text-align: center;
     margin-bottom: 6rem;
 }
-.news__title{
+
+.news__title {
     /* color: var(--color-bg-dark); */
     margin-bottom: 3rem;
 }
-.news__description{
+
+.news__description {
     text-align: center;
     margin: 0 auto;
 }
-.news__list{
+
+.news__list {
     /* Flex */
 }
-.news__new{
+
+.news__new {
     /* Flex + align */
 
     gap: 2rem;
@@ -719,25 +979,28 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 }
 
-.news__new:last-child{
+.news__new:last-child {
     border-left: 1px solid var(--color-borders);
     padding-left: 2.5rem;
 }
-.news__container-img{
+
+.news__container-img {
     overflow: hidden;
     border-radius: 3rem;
 }
-.new__img{
+
+.new__img {
     border-radius: 3rem;
 
     /* efecto */
 
 }
 
-.new__content{
+.new__content {
     /* flex */
 }
-.new__title{
+
+.new__title {
     font-size: 2.4rem;
     line-height: 1.4;
     font-weight: 700;
@@ -747,13 +1010,14 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 }
 
-.new__description{
+.new__description {
     font-size: 1.7rem;
     font-weight: normal;
     color: var(--color-subtitle);
     margin-bottom: 3rem;
 }
-.new__more{
+
+.new__more {
     display: inline-block;
     font-weight: 700;
     font-size: 1.8rem;
@@ -761,64 +1025,75 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     /* efecto */
 
 }
-.new__icon{
+
+.new__icon {
     font-size: 1.3rem;
     vertical-align: middle;
 }
-.new-shapes__item{
+
+.new-shapes__item {
     /* position + z-index */
 
 }
-.new-shapes--shape1{
+
+.new-shapes--shape1 {
     /* position */
 
     opacity: 0.7;
 }
-.new-shapes--shape2{
+
+.new-shapes--shape2 {
     /* position */
 
     opacity: 0.7;
 }
-.new-shapes--shape3{
+
+.new-shapes--shape3 {
     /* position */
 
     opacity: 0.7;
 }
-.new-shapes--shape4{
+
+.new-shapes--shape4 {
     /* position */
 
     opacity: 0.7;
 }
 
 /* Estilos para la sección de Contacto */
-.layout__contact{
+.layout__contact {
     /* position + z-index */
 
     overflow: hidden;
-    padding: 0; /* inicializo a 0 */
+    padding: 0;
+    /* inicializo a 0 */
     padding-top: 14rem;
     padding-bottom: 10rem;
     /* background-color: var(--color-primary); */
 }
+
 /* pseudoelemento before */
 
-.contact__container{
+.contact__container {
     max-width: var(--mx-width);
     margin: 0 auto;
     overflow: hidden;
 }
-.contact__header{
+
+.contact__header {
     margin-bottom: 6.5rem;
     text-align: center;
 }
-.contact__subtitle{
+
+.contact__subtitle {
     display: inline-block;
     color: var(--colog-bg-btn);
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
-.contact__title{
+
+.contact__title {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 5.5rem;
@@ -827,7 +1102,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     font-weight: 500;
     color: var(--color-secondary);
 }
-.contact__btn{
+
+.contact__btn {
     display: inline-block;
     /* position + z-index */
 
@@ -842,85 +1118,101 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 }
 
-.contact__images{
+.contact__images {
     position: relative;
     text-align: center;
     border-bottom: 1px solid var(--color-borders);
 }
-.contact__thumb{
+
+.contact__thumb {
     display: inline-block;
 }
-.contact__thumb--chat{
+
+.contact__thumb--chat {
     margin-right: -18rem;
     margin-bottom: -0.8rem;
 }
-.contact__thumb--laptop{
+
+.contact__thumb--laptop {
     /* position */
 
 }
-.contact__thumb--mobile{
+
+.contact__thumb--mobile {
     /* position */
 }
-.backshapes__item{
+
+.backshapes__item {
     /* position + z-index */
 }
-.backshapes--shape1{
+
+.backshapes--shape1 {
     /* position */
 }
-.backshapes--shape2{
+
+.backshapes--shape2 {
     /* position */
 
     opacity: 0.5;
     /* animación */
 
 }
-.backshapes--shape3{
+
+.backshapes--shape3 {
     /* position */
 
     /* animación */
 
 }
-.backshapes--shape4{
+
+.backshapes--shape4 {
     /* position */
 
     /* animación */
-    
+
 }
-.backshapes--shape5{
+
+.backshapes--shape5 {
     /* position */
 
     /* animación */
-    
+
 }
-.backshapes--shape6{
+
+.backshapes--shape6 {
     /* position */
 
     /* animación */
-    
+
 }
-.backshapes--shape7{
+
+.backshapes--shape7 {
     /* position */
 
     /* animación */
-    
+
 }
 
 /* Estilos del Pié de Página */
-.layout__footer{
+.layout__footer {
     padding-top: 1rem;
 }
-.footer__container{
+
+.footer__container {
     max-width: var(--mx-width);
     margin: 0 auto;
 }
-.footer__top{
+
+.footer__top {
     padding-bottom: 4rem;
 }
-.footer__social{
+
+.footer__social {
     /* flex + justify + align */
 
 }
-.social__img{
+
+.social__img {
     display: inline-block;
     color: var(--color-text-description);
     font-size: 3rem;
@@ -929,19 +1221,22 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 }
 
-.footer__main{
+.footer__main {
     /* flex */
 }
-.footer_fleft{
+
+.footer_fleft {
     /* flex */
 }
-.fleft__container{
+
+.fleft__container {
     border-right: 1 px solid var(--color-borders);
     padding-right: 8rem;
     margin-right: 4rem;
     margin-bottom: 8rem;
 }
-.fleft__title{
+
+.fleft__title {
     display: inline-block;
     font-size: 6.4rem;
     line-height: 1.2;
@@ -949,11 +1244,13 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
     margin-bottom: 2rem;
 }
-.fleft__subtitle{
+
+.fleft__subtitle {
     font-size: 1.7rem;
     margin-bottom: 4rem;
 }
-.fleft__group{
+
+.fleft__group {
     /* position */
 
     /* flex + align */
@@ -963,13 +1260,15 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     height: 7.2rem;
     padding: 1rem;
     box-shadow: 0 24px 48px -15px var(--color-borders);
-    
+
 }
-.fleft__mail-icon{
+
+.fleft__mail-icon {
     display: inline-block;
     margin-left: 2rem;
 }
-.fleft__form-control{
+
+.fleft__form-control {
     /* position */
 
     /* flex */
@@ -982,7 +1281,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
     margin-left: 1rem;
 }
-.fleft__btn{
+
+.fleft__btn {
     cursor: pointer;
     height: 5.2rem;
     border: none;
@@ -994,58 +1294,66 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     /* efecto */
 }
 
-.footer__fright{
+.footer__fright {
     /* flex */
 
 }
-.footer__widget{
+
+.footer__widget {
     /* flex-basis */
 
 }
-.widget__title{
+
+.widget__title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-title);
     margin-bottom: 3rem;
 }
-.widget__link{
+
+.widget__link {
     font-size: 1.8rem;
     padding: 0.8rem 0;
     display: inline-block;
     /* efecto */
 }
 
-.footer__bottom{
+.footer__bottom {
     /* flex */
 
     border-top: 1px solid var(--color-borders);
     padding: 2.5rem 0;
-    
+
 }
-.footer__copyright{
+
+.footer__copyright {
     /* flex-basis */
 }
-.copyrigth__text{
+
+.copyrigth__text {
     display: inline-block;
     color: var(--color-text-body);
 }
-.copyrigth__text > a{
+
+.copyrigth__text>a {
     display: inline;
 }
-.footer__links{
+
+.footer__links {
     /* flex-basis */
 }
-.footer__flinks{
+
+.footer__flinks {
     /* position */
 
     /* flex */
 
     gap: 2rem;
 }
-.flinks__title{
+
+.flinks__title {
     /* efecto */
 }
 
 /* pseudoelemento after */
-
