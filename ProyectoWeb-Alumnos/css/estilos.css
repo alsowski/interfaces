@@ -75,21 +75,35 @@ body {
 /* Cabecera */
 .header {
     width: 100%;
-    height: 70px;
-    background-color: var(--color-bg);
+    height: 200px;
     font-family: "BebasNeue";
     color: var(--color-text-white);
+    display: grid;
+    align-items: center;
+    align-content: center;
+    background: url("../img/fondo.jpg");
+    animation: backBanner 30s linear infinite;
+}
+
+/* keyframes */
+@keyframes backBanner {
+    from {
+        background-position: 600px 200px;
+    }
+
+    to {
+        background-position: -600px -200px;
+        ;
+    }
 }
 
 .header__logo {
-    float: left;
-    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
     height: 50px;
-    background-color: var(--color-primary);
-    text-align: center;
-    margin-top: 8px;
-    margin-left: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 20px;
+    justify-items: center;
     cursor: pointer;
     overflow: hidden;
     /* transición */
@@ -99,10 +113,9 @@ body {
 }
 
 .header__logo h3 {
-    display: block;
-    float: right;
     font-size: 40px;
-    margin-right: 65px;
+    text-align: center;
+    padding-left: 22px;
     /* transición */
     /* transition: all 500ms ease-in-out;  */
 
@@ -110,32 +123,31 @@ body {
 
 /* efecto con keyframes - hover en el Logo */
 .header__logo:hover h3 {
-    animation: desdeDerecha 2s;
+    animation: desdeArriba 0.50s;
 }
 
-@keyframes desdeDerecha {
+@keyframes desdeArriba {
     from {
-        transform: translateX(200%);
+        transform: translateY(-200%);
     }
 
     to {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
 }
 
 /* efecto hover en Logo */
 .header__logo:hover {
-    background-color: var(--color-backgroung);
-    color: black;
+    color: burlywood;
     border-radius: 2px;
 }
 
 .header__logo .logo__gear {
-    display: block;
-    float: left;
+    display: grid;
     font-size: 30px;
     margin-top: 4px;
-    margin-left: 26px;
+    width: 20px;
+    height: 20px;
 
     /* A la hora de crear animación */
     animation: giraRueda 4s infinite linear;
@@ -173,9 +185,50 @@ body {
 }
 
 .header__menu {
-    float: right;
+    display: grid;
     height: 70px;
     background: transparent;
+}
+
+.header__wrap {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.header__img {
+    width: 50px;
+    height: 55px;
+    animation: giraRueda 4s infinite linear;
+}
+
+/* animación logo rueda */
+@keyframes giraRueda {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header__logo:hover .header__img {
+    animation: desdeAbajo 0.50s;
+}
+
+@keyframes desdeAbajo {
+    from {
+        transform: translateY(200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.menu__list{
+    border: 2px solid rgb(150, 163, 29);
 }
 
 .menu__list li {
@@ -185,6 +238,7 @@ body {
     margin: 0px 20px 0px 20px;
     letter-spacing: 1px;
     line-height: 70px;
+    text-align: center;
 }
 
 .menu__list li a {
@@ -197,8 +251,25 @@ body {
 
 /* hover */
 .menu__list li a:hover {
-    color: var(--color-primary);
+    color: burlywood;
     transform: scale(1.2);
+}
+
+/* Maquetación mock up */
+.menu__list li a::before{
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    background-color: burlywood;
+    bottom: 1.8rem;
+    left: 0;
+    width: 0%;
+    opacity: 0;
+    transition: all 350ms linear;
+}
+.menu__list li a:hover::before{
+    width: 100%;
+    opacity: 1;
 }
 
 /* Maquetando el Banner */
@@ -213,18 +284,6 @@ body {
     overflow: hidden;
     /* animación */
     animation: backBanner 10s linear infinite;
-}
-
-/* keyframes */
-@keyframes backBanner {
-    from {
-        background-position: 200px 200px;
-    }
-
-    to {
-        background-position: -200px -200px;
-        ;
-    }
 }
 
 .content__banner h1 {
