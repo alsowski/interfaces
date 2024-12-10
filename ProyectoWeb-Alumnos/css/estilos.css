@@ -227,7 +227,7 @@ body {
     }
 }
 
-.menu__list{
+.menu__list {
     border: 2px solid rgb(150, 163, 29);
 }
 
@@ -256,7 +256,7 @@ body {
 }
 
 /* Maquetación mock up */
-.menu__list li a::before{
+.menu__list li a::before {
     content: "";
     position: absolute;
     height: 0.2rem;
@@ -267,7 +267,8 @@ body {
     opacity: 0;
     transition: all 350ms linear;
 }
-.menu__list li a:hover::before{
+
+.menu__list li a:hover::before {
     width: 100%;
     opacity: 1;
 }
@@ -324,8 +325,8 @@ body {
 }
 
 .cards__card {
-    width: 200px;
-    height: 260px;
+    width: 250px;
+    height: 350px;
     border: 1px solid rgb(0, 44, 0);
     box-shadow: 1px 1px 4px green;
     overflow: hidden;
@@ -335,6 +336,7 @@ body {
     /* transicion */
     transition: all 500ms;
     background-color: white;
+    border-radius: 10px;
 
 }
 
@@ -344,17 +346,16 @@ body {
 }
 
 .cards__card:last-child {
-    margin-right: 0px;
+    /* margin-right: 0px;   */
 }
 
 .cards__card .card__icon {
-    display: block;
-    width: 100%;
-    height: 110px;
     font-size: 50px;
     line-height: 90px;
     text-align: center;
-    margin: 0px auto;
+    width: 248px;
+    height: 248px;
+    margin-top: 20px;
 }
 
 /*efecto hover en la carta modificamos card__icon */
@@ -377,14 +378,14 @@ body {
 }
 
 .card__category {
-    margin-top: 80px;
+    margin-top: 20px;
     width: 100%;
     height: 50px;
     font-family: "TrebuchetMS";
     font-size: 21px;
     font-weight: bold;
     text-align: center;
-    color: greenyellow;
+    color: green;
     transition: all 500ms;
 }
 
@@ -407,21 +408,28 @@ body {
 }
 
 /* Barra lateral */
+.content__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+}
+
 .content__lateral {
-    width: 300px;
+    width: 470px;
     min-height: 1070px;
     font-family: "TrebuchetMS";
-    float: right;
     margin: 20px;
 }
 
 .lateral__title {
-    display: block;
+    display: grid;
+    justify-items: center;
+    align-items: center;
     width: auto;
-    height: 45px;
+    height: 75px;
     line-height: 49px;
     background: url("../img/pxvar.png"), var(--color-text-white);
-    box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
+    box-shadow: 0px 1px 0px greenyellow, 1px 2px 0px greenyellow, 2px 3px 0px greenyellow, 3px 4px 0px greenyellow;
     font-size: 30px;
     font-family: "BebasNeue";
     font-weight: normal;
@@ -429,6 +437,8 @@ body {
     padding-left: 15px;
     margin-top: 30px;
     margin-bottom: 15px;
+    border: 1px solid green;
+    color: green;
 }
 
 .lateral__title:first-child {
@@ -436,7 +446,7 @@ body {
 }
 
 .lateral__search {
-    width: 90%;
+    width: 85%;
     height: 30px;
     margin: 10px auto;
     background-color: var(--color-text-white);
@@ -450,7 +460,7 @@ body {
     /* para que quepa el botón */
     height: 30px;
     border: none;
-    padding-left: 5px;
+    padding-left: 0px;
     border-radius: 5px;
     background-color: transparent;
     color: var(--color-backgroung);
@@ -460,7 +470,7 @@ body {
 
 /* obtengo foco en input[type="text"] */
 .lateral__search input[type="text"]:focus {
-    color: var(--color-primary);
+    color: black;
 }
 
 .lateral__search input[type="button"],
@@ -484,7 +494,7 @@ body {
     margin-top: 20px;
     padding-top: 2px;
     background-color: var(--color-text-white);
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px var(--color-text-white) inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0px 0px 1px green, 0px 3px 7px green, 0px 1px green inset, 0px -3px 2px green inset;
 }
 
 .lateral__login input[type="email"],
@@ -497,7 +507,7 @@ body {
     border: 1px solid var(--color-backgroung);
     box-shadow: 1px 1px 1px var(--color-backgroung) inset;
     border-radius: 5px;
-    padding-left: 30px;
+    padding-left: 10px;
     color: var(--color-gray);
 }
 
@@ -512,13 +522,13 @@ body {
     display: block;
     text-align: center;
     position: absolute;
-    margin-left: 30px;
+    margin-left: 15px;
     margin-top: 6px;
     height: 30px;
 }
 
 .lateral__login .lateral-box__password {
-    margin-left: 30px;
+    margin-left: 15px;
     margin-top: 22px;
     font-size: 20px;
 }
@@ -528,15 +538,14 @@ body {
 .lateral__login input[type="reset"],
 .lateral__login button {
     /* display: block; */
-    float: left;
     text-align: center;
     width: 100px;
     height: 35px;
     margin-top: 20px;
     color: var(--color-text-white);
     /* Degradado desde abajo - to bottom --> hacia arriba */
-    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
-    border: 1px solid #156785;
+    background: linear-gradient(to bottom, green 0%, greenyellow 100%);
+    border: 1px solid #095f09;
     border-radius: 0px;
     cursor: pointer;
     font-size: 15px;
@@ -558,7 +567,7 @@ body {
     text-decoration: none;
     margin-left: 18px;
     font-size: 14px;
-    color: var(--color-focus);
+    color: green;
 }
 
 /* efecto en el .lateral__login a mediante hover */
@@ -570,10 +579,10 @@ body {
 
 .lateral__social a {
     display: block;
-    color: var(--color-bg);
+    color: green;
     text-decoration: none;
     font-size: 30px;
-    margin-left: 20px;
+    margin-left: 125px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -584,13 +593,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: 0px 0px 1px var(--color-backgroung);
-    border: 3px solid var(--color-text-white);
-    box-shadow: 0px 0px 4px var(--color-backgroung);
-    background: #F4F7FE;
+    text-shadow: 0px 0px 1px green;
+    border: 3px solid green;
+    box-shadow: 0px 0px 4px green;
+    background: #b9e0b1;
     position: absolute;
     padding: 5px;
-    margin-left: 70px;
+    margin-left: 210px;
     margin-top: -52px;
     cursor: pointer;
     transform: translateX(-80%);
@@ -607,11 +616,52 @@ body {
     transform: translateX(0%);
 }
 
+.lateral__team aside-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid green;
+}
+
+.team__info {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 57px;
+}
+
 /* Artículos */
+.articles__title {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    height: 75px;
+    line-height: 49px;
+    background: url("../img/pxvar.png"), var(--color-text-white);
+    box-shadow: 0px 1px 0px greenyellow, 1px 2px 0px greenyellow, 2px 3px 0px greenyellow, 3px 4px 0px greenyellow;
+    font-size: 30px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border: 1px solid green;
+    color: green;
+}
+
+.lateral__title:first-child {
+    margin-top: 0px;
+}
+
 .content__articles {
-    float: left;
     /* es necesario flotarlo puesto que he incluido el div clearfix*/
-    width: 860px;
+    width: 750px;
 }
 
 .content__articles h2 {
@@ -626,33 +676,39 @@ body {
     font-weight: normal;
     letter-spacing: 2px;
     background: url("../img/pxvar(--color-gray).png"), var(--color-text-white);
-    box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
     margin: 0px auto;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
+.articles_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .articles__article {
     width: 98%;
     height: auto;
-    border: 1px solid var(--color-backgroung);
-    margin: 40px auto;
+    border: 1px solid rgb(3, 61, 3);
+    margin: 34px auto;
     padding: 10px;
     font-family: "TrebuchetMS";
-    background: var(--color-text-white);
-    color: var(--color-bg);
-    box-shadow: 1px 1px 2px var(--color-box-shadow);
+    background: rgb(229, 250, 219);
+    color: green;
+    box-shadow: 1px 1px 2px green;
 }
 
 .articles__article h4 {
     display: block;
     font-size: 23px;
-    margin: 3px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    padding-top: 20px;
 }
 
 .articles__article h4 a {
     text-decoration: none;
-    color: var(--color-text-title);
+    color: rgb(4, 94, 4);
 }
 
 .articles__article h4 a:hover {
@@ -660,15 +716,13 @@ body {
 }
 
 .article__datos {
-    float: right;
-    background-color: var(--color-box-shadow2);
+    background-color: rgb(50, 104, 55);
     color: var(--color-text-white);
-    height: 30px;
+    height: 35px;
     line-height: 30px;
     margin: -10px;
     padding: 4px;
-    font-size: 13px;
-    border-radius: 0px 0px 0px 5px;
+    font-size: 14px;
     /* esquina inferior izq 5px */
 }
 
@@ -685,6 +739,7 @@ body {
 .articles__blog {
     height: 100px;
     margin-top: 60px;
+
     line-height: 100px;
     text-align: center;
     font-family: "BebasNeue";
@@ -696,21 +751,83 @@ body {
     font-family: "BebasNeue";
     font-size: 40px;
     letter-spacing: 3px;
-    color: var(--color-text-title);
+    color: green;
     text-decoration: none;
+    margin-top: -50px;
+    margin-left: 425px;
     /* transición */
+    transition: all 500ms;
 }
 
-/* efecto de hover sobre articles__blog */
+/* hover */
+.articles__blog a:hover {
+    color: rgb(10, 238, 10);
+    transform: scale(1.2);
+}
 
+/* Maquetación mock up */
+.articles__blog a::before {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    background-color: rgb(10, 238, 10);
+    bottom: 1.8rem;
+    left: 0;
+    width: 0%;
+    opacity: 0;
+    transition: all 350ms linear;
+}
+
+.articles__blog a:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.article__image {
+    width: 200px;
+    height: 200px;
+    border: 3px solid green;
+    margin-top: 10px;
+}
+
+.article__autor {
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.lateral__sponsors aside-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sponsor__image {
+    width: 150px;
+    height: 150px;
+    margin: 24px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.sponsor__info {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 54px;
+}
+
+a {
+    align-items: center;
+}
 
 /* FOOTER */
 .content__footer {
     width: 100%;
     height: 470px;
-    background-color: black;
-    color: var(--color-text-white);
+    background-color: rgb(3, 51, 3);
+    color: green;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 .footer__wrap>div {
@@ -719,13 +836,13 @@ body {
     height: 370px;
     margin: 40px;
     text-align: center;
-    color: var(--color-text-white);
+    color: white;
     font-family: "TrebuchetMS";
 }
 
 .content__footer a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: white;
     /* transición */
 
 }
@@ -739,7 +856,7 @@ body {
     font-family: "BebasNeue";
     font-size: 40px;
     line-height: 55px;
-    color: black;
+    color: rgb(19, 139, 19);
     border-radius: 5px;
     margin-bottom: 15px;
 }
@@ -776,7 +893,7 @@ body {
     height: 300px;
     margin-top: 10px;
     border-radius: 5px;
-    border: 5px solid var(--color-text-white);
+    border: 5px solid white;
     box-shadow: 0px 0px 5px var(--color-gray);
 }
 

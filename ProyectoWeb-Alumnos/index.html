@@ -7,7 +7,7 @@
     <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Proyecto Web</title>
-    <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/samas.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset_estilos.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -39,48 +39,48 @@
         <section class="content__info">
             <!-- Inicio Banner -->
             <div class="content__banner">
-                <h1>¡Ofertas Ecológicas!</h1>
+                <h1>¡Nuevos Artículos Ecológicos Ya Disponibles!</h1>
             </div>
             <!-- fin de Banner -->
             <!-- Inicio Tarjetas -->
             <div class="content__cards">
                 <div class="cards__card">
-                    <p class="card__icon"><img src="img/silla.png"></p>
+                    <p><img class="card__icon" src="img/silla.png"></p>
                     <h2 class="card__category">Sillas</h2>
                     <!-- <p class="card__description">
                         Aprende los principales lenguajes para desarrollar webs. !Conviértete en Web Master!
                     </p> -->
                 </div>
                 <div class="cards__card">
-                    <p class="card__icon"><img src="img/armario.png"></p>
-                    <h2 class="card__category">Armarios</h2>
-                    <!-- <p class="card__description">
-                        Aprende a administrar sistemas operativos linux y windows.
-                    </p> -->
-                </div>
-                <div class="cards__card">
-                    <p class="card__icon"><img src="img/lampara.png"></p>
+                    <p><img class="card__icon" src="img/lampara.png"></p>
                     <h2 class="card__category">Lamparas</h2>
                     <!-- <p class="card__description">
                         Conoce los entresijos del hardware.
                     </p> -->
                 </div>
                 <div class="cards__card">
-                    <p class="card__icon"><img src="img/cama.png"></p>
+                    <p><img class="card__icon" src="img/cama.png"></p>
                     <h2 class="card__category">Camas</h2>
                     <!-- <p class="card__description">
                         Aprende a configurar y administrar redes informáticas y servidores.
                     </p> -->
                 </div>
                 <div class="cards__card">
-                    <p class="card__icon"><img src="img/mesa.png"></p>
+                    <p><img class="card__icon" src="img/mesa.png"></p>
                     <h2 class="card__category">Mesas</h2>
                     <!-- <p class="card__description">
                         Aprende a instalar y administrar bases de datos.
                     </p> -->
                 </div>
                 <div class="cards__card">
-                    <p class="card__icon"><img src="img/cuadro.png"></p>
+                    <p><img class="card__icon" src="img/armario.png"></p>
+                    <h2 class="card__category">Armarios</h2>
+                    <!-- <p class="card__description">
+                        Aprende a administrar sistemas operativos linux y windows.
+                    </p> -->
+                </div>
+                <div class="cards__card">
+                    <p><img class="card__icon" src="img/cuadro.png"></p>
                     <h2 class="card__category">Decoración</h2>
                     <!-- <p class="card__description">
                         Aprende a instalar y administrar bases de datos.
@@ -91,137 +91,148 @@
         </section>
         <!-- Inicio de Barra Lateral -->
         <div class="clearfix"></div>
-        <aside class="content__lateral">
-            <h3 class="lateral__title">BUSCAR</h3>
-            <div class="lateral__search">
-                <form>
-                    <input type="text">
-                    <input type="button" value="L" class="search__icon">
-                </form>
-            </div>
-            <h3 class="lateral__title">LOGIN</h3>
-            <div class="lateral__login aside-box">
-                <form>
-                    <label class="lateral-box__user aside-box__icon">U</label>
-                    <input type="email">
-                    <label class="lateral-box__password aside-box__icon">w</label>
-                    <input type="password">
-                    <input type="submit" value="Entrar">
-                    <input type="reset" value="Limpiar">
-                    <a href="#">Regístrate aquí</a>
-                    <a href="#">Has olvidado tu contraseña?</a>
-                </form>
-            </div>
-            <h3 class="lateral__title">REDES SOCIALES</h3>
-            <div class="lateral__social aside-box">
-                <div class="social__twitter">
-                    <a href="#" class="social__icon">t</a>
-                    <p class="social__overlay">
-                        Twitter
-                    </p>
+        <!-- Barra de búsqueda -->
+        <h3 class="lateral__title">BARRA DE BÚSQUEDA</h3>
+        <div class="lateral__search">
+            <form>
+                <input type="text" placeholder="Sillón blanco de cuero...">
+                <input type="button" value="L" class="search__icon">
+            </form>
+        </div>
+        <div class="content__content">
+            <!-- Inicio de los Artículos -->
+            <section class="content__articles">
+                <h2 class="articles__title">Últimas reseñas</h2>
+                <div class="clearfix"></div>
+                <div class="articles_content">
+                    <article class="articles__article">
+                        <div class="article__datos">
+                            <span>Fecha: 23 de julio</span>
+                            <span>Categoría: Sillas</span>
+                        </div>
+                        <h4 class="article__subtitle">
+                            <a href="#">Buena calidad!</a>
+                        </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis
+                            tenetur,
+                            modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque
+                            necessitatibus,
+                            possimus quas? Fugiat, veritatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Impedit, dolores. Consequatur quis
+                            tenetur!. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores.
+                            Consequatur quis
+                            tenetur</p>
+                        <img class="article__image" src="img/reseña1.jpg">
+                        <p class="article__autor">Paula Pereira Rios</p>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__datos">
+                            <span>Fecha: 02 de diciembre</span>
+                            <span>Categoría: Lámparas</span>
+                        </div>
+                        <h4 class="article__subtitle">
+                            <a href="#">Satisfecho con mi compra</a>
+                        </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis
+                            tenetur,
+                            modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque
+                            necessitatibus,
+                            possimus quas? Fugiat, veritatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Impedit, dolores. Consequatur quis
+                            tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores.
+                            Consequatur quis
+                            tenetur!</p>
+                        <img class="article__image" src="img/reseña3.jpg">
+                        <p class="article__autor">Alvaro Sánchez Velasco</p>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__datos">
+                            <span>Fecha: 13 de octubre</span>
+                            <span>Categoría: Mesas</span>
+                        </div>
+                        <h4 class="article__subtitle">
+                            <a href="#">Encantado con mi mesa</a>
+                        </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis
+                            tenetur,
+                            modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque
+                            necessitatibus,
+                            possimus quas? Fugiat, veritatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Impedit, dolores. Consequatur quis
+                            tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores.
+                            Consequatur quis
+                            tenetur!</p>
+                        <img class="article__image" src="img/reseña4.jpg">
+                        <p class="article__autor">Alejandro Garnacho González</p>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__datos">
+                            <span>Fecha: 31 de enero</span>
+                            <span>Categoría: Armarios</span>
+                        </div>
+                        <h4 class="article__subtitle">
+                            <a href="#">Recomendable al 100%</a>
+                        </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis
+                            tenetur,
+                            modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque
+                            necessitatibus,
+                            possimus quas? Fugiat, veritatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Impedit, dolores. Consequatur quis
+                            tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores.
+                            Consequatur quis
+                            tenetur!</p>
+                        <img class="article__image" src="img/reseña2.jpg">
+                        <p class="article__autor">Sandra Martínez Casado</p>
+                    </article>
                 </div>
-                <div class="social__facebook">
-                    <a href="#" class="social__icon">f</a>
-                    <p class="social__overlay">
-                        Facebook
-                    </p>
+                <article class="articles__blog">
+                    <a href="#">Ir al Inicio</a>
+                </article>
+                <!-- fin de los Artículos -->
+            </section>
+            <aside class="content__lateral">
+                <h3 class="lateral__title">LOGIN</h3>
+                <div class="lateral__login aside-box">
+                    <form>
+                        <label class="lateral-box__user aside-box__icon">U</label>
+                        <input type="email" placeholder="Email">
+                        <label class="lateral-box__password aside-box__icon">w</label>
+                        <input type="password" placeholder="Contraseña">
+                        <input type="submit" value="Entrar">
+                        <input type="reset" value="Limpiar">
+                        <a href="#">Regístrate aquí</a>
+                        <a href="#">Has olvidado tu contraseña?</a>
+                    </form>
                 </div>
-                <div class="social__youtube">
-                    <a href="#" class="social__icon">y</a>
-                    <p class="social__overlay">
-                        Youtube
-                    </p>
+                <h3 class="lateral__title">EQUIPO DE TRABAJO</h3>
+                <div class="lateral__team aside-box">
+                    <!-- <ul>
+                        <li>
+                            <img src="img/android.png">
+                        </li>
+                        <li>
+                            <img src="img/safari.png">
+                        </li>
+                        <li>
+                            <img src="img/chrome.png">
+                        </li>
+                    </ul> -->
                 </div>
-            </div>
-            <h3 class="lateral__title">PATROCINADORES</h3>
-            <div class="lateral__sponsors aside-box">
-            </div>
-        </aside>
-        <!-- fin de Aside -->
-        <!-- Inicio de los Artículos -->
-        <section class="content__articles">
-            <h2 class="articles__title">Últimos artículos</h2>
-            <div class="clearfix"></div>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de enero</span>
-                    <span>Categoría: Pruebas</span>
+                <h3 class="lateral__title">PATROCINADORES</h3>
+                <div class="lateral__sponsors aside-box">
+                    <div class="lateral__sponsors info-box">
+                        <img class="sponsor__image" src="img/patrocinador1.jpg">
+                        <img class="sponsor__image" src="img/patrocinador2.jpg">
+                    </div>
+                    <div class="lateral__sponsors info-box">
+                        <span class="sponsor__info">Nandez_Twitch</span>
+                        <span class="sponsor__info">FC Barcelona</span>
+                    </div>
                 </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 1</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de febrero</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 2</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de marzo</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 3</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de abril</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 4</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__article">
-                <div class="article__datos">
-                    <span>Fecha: 01 de agosto</span>
-                    <span>Categoría: Pruebas</span>
-                </div>
-                <h4 class="article__subtitle">
-                    <a href="#">Título de artículo 5</a>
-                </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur,
-                    modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                    possimus quas? Fugiat, veritatis!</p>
-            </article>
-            <article class="articles__blog">
-                <a href="#">Ir al Blog</a>
-            </article>
-        </section>
-        <!-- fin de los Artículos -->
+            </aside>
+            <!-- fin de Aside -->
+        </div>
     </main>
     <div class="clearfix"></div>
     <!-- Inicio de Pié de Página -->
@@ -249,26 +260,26 @@
                     <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png"
                         alt="Creado con HTML y CSS">
                 </p>
-                <h5 class="footer__title">Optimizado para</h5>
+                <h5 class="footer__title">Redes sociales</h5>
                 <p class="footer__browsers">
                     <a href="#">
-                        <img src="img/firefox-icon.png" alt="Firefox">
+                        <img src="img/logo1.png" alt="Firefox">
                     </a>
                     <a href="#">
-                        <img src="img/chrome.png" alt="Chrome">
+                        <img src="img/logo2.png" alt="Chrome">
                     </a>
                     <a href="#">
-                        <img src="img/safari.png" alt="Safari">
+                        <img src="img/logo5.png" alt="Safari">
                     </a>
                     <a href="#">
-                        <img src="img/android.png" alt="Android">
+                        <img src="img/logo3.png" alt="Android">
                     </a>
                     <a href="#">
-                        <img src="img/Opera_256x256.png" alt="Opera">
+                        <img src="img/logo4.png" alt="Opera">
                     </a>
                 </p>
                 <h5 class="footer__title">AUTOR</h5>
-                <p>&copy; Alumn@ - WEB</p>
+                <p>&copy; Alejandro Vila Cara - WEB</p>
             </div>
         </div>
     </footer>
