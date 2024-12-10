@@ -439,6 +439,31 @@ body {
     margin-bottom: 15px;
     border: 1px solid green;
     color: green;
+<<<<<<< HEAD
+=======
+    border-radius: 10px;
+}
+
+.lateral__title__search {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    height: 75px;
+    line-height: 49px;
+    background: url("../img/pxvar.png"), var(--color-text-white);
+    box-shadow: 0px 1px 0px greenyellow, 1px 2px 0px greenyellow, 2px 3px 0px greenyellow, 3px 4px 0px greenyellow;
+    font-size: 30px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 10px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
 }
 
 .lateral__title:first-child {
@@ -634,6 +659,52 @@ body {
     margin: 57px;
 }
 
+<<<<<<< HEAD
+=======
+.lateral__team {
+    display: grid;
+    width: 450px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+}
+
+.table__team {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    border: green 3px solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    font-size: 14px;
+}
+
+.table__content {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    border: rgb(10, 197, 10) 3px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__team div {
+    border: 1px solid green;
+}
+
+.table__team span {
+    font-size: 16px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: #005000;
+}
+
+.team__foto {
+    margin-left: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
 /* Artículos */
 .articles__title {
     display: grid;
@@ -653,6 +724,10 @@ body {
     margin-bottom: 15px;
     border: 1px solid green;
     color: green;
+<<<<<<< HEAD
+=======
+    border-radius: 10px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
 }
 
 .lateral__title:first-child {
@@ -693,6 +768,10 @@ body {
     margin: 34px auto;
     padding: 10px;
     font-family: "TrebuchetMS";
+<<<<<<< HEAD
+=======
+    font-size: 13px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
     background: rgb(229, 250, 219);
     color: green;
     box-shadow: 1px 1px 2px green;
@@ -704,6 +783,13 @@ body {
     margin-bottom: 4px;
     margin-top: 2px;
     padding-top: 20px;
+<<<<<<< HEAD
+=======
+}
+
+.articles__article p {
+    margin-top: 5px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
 }
 
 .articles__article h4 a {
@@ -738,8 +824,12 @@ body {
 
 .articles__blog {
     height: 100px;
+<<<<<<< HEAD
     margin-top: 60px;
 
+=======
+    margin-top: 40px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
     line-height: 100px;
     text-align: center;
     font-family: "BebasNeue";
@@ -754,7 +844,11 @@ body {
     color: green;
     text-decoration: none;
     margin-top: -50px;
+<<<<<<< HEAD
     margin-left: 425px;
+=======
+    align-items: center;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
     /* transición */
     transition: all 500ms;
 }
@@ -772,14 +866,22 @@ body {
     height: 0.2rem;
     background-color: rgb(10, 238, 10);
     bottom: 1.8rem;
+<<<<<<< HEAD
     left: 0;
+=======
+    left: 243px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
     width: 0%;
     opacity: 0;
     transition: all 350ms linear;
 }
 
 .articles__blog a:hover::before {
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 35%;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
     opacity: 1;
 }
 
@@ -813,7 +915,11 @@ body {
 .sponsor__info {
     font-size: 13px;
     font-weight: bold;
+<<<<<<< HEAD
     margin: 54px;
+=======
+    margin: 57px;
+>>>>>>> c2cfbe2313c7840cc903ecaa6731d2cb1796b9c0
 }
 
 a {
@@ -830,9 +936,10 @@ a {
     margin-top: 50px;
 }
 
-.footer__wrap>div {
-    float: left;
-    width: 25%;
+.footer__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
     height: 370px;
     margin: 40px;
     text-align: center;
@@ -848,7 +955,7 @@ a {
 }
 
 .footer__title {
-    display: block;
+    display: grid;
     background: url("../img/pxvar.png"), var(--color-text-white);
     height: 50px;
     letter-spacing: 2px;
@@ -859,6 +966,8 @@ a {
     color: rgb(19, 139, 19);
     border-radius: 5px;
     margin-bottom: 15px;
+    margin: 15px;
+    width: 90%;
 }
 
 .footer__list {
@@ -885,11 +994,13 @@ a {
     /* .footer__list li:hover a{ */
     padding-left: 40px;
     color: var(--color-text-white);
-    width: 100%;
+    width: 60%;
+    color: burlywood;
+    border-radius: 2px;
 }
 
 .content__footer iframe {
-    width: 100%;
+    width: 60%;
     height: 300px;
     margin-top: 10px;
     border-radius: 5px;
@@ -897,17 +1008,29 @@ a {
     box-shadow: 0px 0px 5px var(--color-gray);
 }
 
+.footer__info {
+    margin-right: 60px;
+}
+
 .content__footer img {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin: 1px;
 }
 
 .footer__browsers img {
-    width: 45px;
+    width: 40px;
+
 }
 
-/* Animaciones y Transiciones
-- Propiedad Animation
-- Keyframes
-- Transitions 
+.footer__browsers {
+    margin-right: 15px;
+}
 
-Indico cada punto aplicado como efecto*/
+.footer__html {
+    margin-right: 10px;
+}
+
+.footer__autor {
+    margin-right: 30px;
+}

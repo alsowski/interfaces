@@ -1,39 +1,196 @@
-/* del 0 al 1245px aplico esto */
-@media (max-width: 1230px){ 
+/* Vista Tablet*/
+@media (max-width: 1024px) {
+    .header__logo {
+        margin-right: 235px;
+    }
 
+    .header__menu {
+        margin-right: 230px;
+    }
+
+    .content__banner {
+        width: 70%;
+        margin-left: 72px;
+    }
+
+    .content__banner h1 {
+        margin-right: 275px;
+    }
+
+    .content__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-right: 225px;
+    }
+
+    .lateral__title__search {
+        width: 900px;
+        margin-left: 50px;
+    }
+
+    .lateral__title {
+        width: 420px;
+        margin-left: 50px;
+        margin-left: 25px;
+    }
+
+    .lateral__search {
+        width: 800px;
+        margin-right: 340px;
+    }
+
+    .articles__title {
+        width: 30px;
+    }
+
+    .content__articles {
+        /* es necesario flotarlo puesto que he incluido el div clearfix*/
+        width: 520px;
+        margin-left: 10px;
+    }
+
+    .lateral__team {
+        width: 420px;
+        height: 420px;
+    }
+
+    .content__footer {
+        height: 1200px;
+    }
+
+    .footer__wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__location {
+        width: 930px;
+    }
+
+    .footer__menuFooter {
+        width: 930px;
+    }
+
+    .footer__info {
+        width: 930px;
+    }
+
+    .footer__browsers {
+        margin-right: 65px;
+    }
+
+    .footer__html {
+        margin-right: 65px;
+    }
+
+    .footer__autor {
+        margin-right: 65px;
+    }
+
+    .articles__blog a::before {
+        left: 168px;
+    }
 }
 
-@media (max-width: 1079px){
+/*Vista Móvil*/
+@media (max-width: 600px) {
+    .header__logo {
+        margin-right: 650px;
+    }
 
+    .header__menu {
+        margin-right: 645px;
+    }
+
+    .content__banner {
+        width: 45%;
+        margin-left: 20px;
+        height: 70px;
+    }
+
+    .content__banner h1 {
+        margin-left: -160px;
+        font-size: 22px;
+    }
+
+    .content__cards {
+        grid-template-columns: 1fr;
+        margin-right: 650px;
+    }
+
+    .lateral__title__search {
+        width: 530px;
+        margin-left: 33px;
+    }
+
+    .lateral__search {
+        width: 500px;
+        margin-right: 690px;
+    }
+
+    .lateral__title {
+        width: 420px;
+        margin-left: 65px;
+    }
+
+    .content__content {
+        grid-template-columns: 1fr;
+    }
+
+    .articles__title {
+        width: 30px;
+    }
+
+    .content__articles {
+        /* es necesario flotarlo puesto que he incluido el div clearfix*/
+        width: 520px;
+        margin-left: 37px;
+    }
+
+    .lateral__team {
+        margin-left: 67px;
+    }
+
+    .lateral__login {
+        margin-left: 77px;
+    }
+
+    .lateral__sponsorsa {
+        margin-left: 77px;
+    }
+
+    .content__footer {
+        height: 1200px;
+    }
+
+    .footer__wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__location {
+        width: 520px;
+    }
+
+    .footer__menuFooter {
+        width: 520px;
+    }
+
+    .footer__info {
+        width: 520px;
+    }
+
+    .footer__browsers {
+        margin-right: 25px;
+    }
+
+    .footer__html {
+        margin-right: 10px;
+    }
+
+    .footer__autor {
+        margin-right: 30px;
+    }
+
+    .articles__blog a::before {
+        left: 168px;
+    }
 }
-@media (max-width: 969px){
- 
-}
-@media (max-width: 920px){
-
-}
-
-@media (max-width: 890px){
-
-}
-
-@media (max-width: 799px){
- 
-}
-/* movemos ya el menú y cambiamos estructura */
-@media (max-width: 800px){
-
-}
-/* Visionado para Móviles */
-@media (max-width: 660px){
- 
-}
-@media (max-width: 550px){
-
-}
-
-@media (max-width: 470px){
- 
-}
-
-
