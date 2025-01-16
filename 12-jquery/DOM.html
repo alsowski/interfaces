@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Ejercicio 1</h1>
+    <button class="item">Texto antiguo</button>
+    <h1>Ejercicio 2</h1>
+    <input class="producto" value="Primero">
+    <input class="producto" value="Segundo">
+    <input class="producto" value="Tercero">
+    <h1>Ejercicio 3</h1>
+    <div>Uno</div>
+    <div>Dos</div>
+    <div>Tres</div>
+    <h1>Ejercicio 4</h1>
+    <h3 id="titulo">Título</h3>
+    <h1>Ejercicio 5</h1>
+    <p>Cambio de tamaño</p>
+    <h1>Ejercicio 6</h1>
+    <ul id="lista">
+        <li>Uno</li>
+        <li>Dos</li>
+    </ul>
+    <h1>Ejercicio 7</h1>
+    <textarea id="descripcion"></textarea>
+    <h1>Ejercicio 8</h1>
+    <span class="carta">Tenemos</span>
+    <span class="carta">el</span>
+    <span class="carta">borde verde</span>
+    <h1>Ejercicio 9</h1>
+    <div>El de abajo se ha ido</div>
+    <div class="eliminar">Nooo</div>
+    <h1>Ejercicio 10</h1>
+    <div id="contenedor">
+        <span>Tenemos</span>
+        <span>el</span>
+        <span>fondo gris</span>
+    </div>
+    <h1>Ejercicio 11</h1>
+    <div>Mis 3 amigos de abajo se han ocultado</div>
+    <div class="foto">Nos vemos</div>
+    <div class="foto">Nos vemos</div>
+    <div class="foto">Nos vemos</div>
+    <h1>Ejercicio 12</h1>
+    <div>
+        <h1>Tenemos</h1>
+        <h1>el</h1>
+        <h1>borde rojo</h1>
+    </div>
+    <h1>Ejercicio 13</h1>
+    <input type="text" value="Da igual lo que ponga">
+    <input type="text" value="Da igual lo que ponga">
+    <input type="text" value="Da igual lo que ponga">
+    <h1>Ejercicio 14</h1>
+    <div class="orden">
+        <div>Nos vemos</div>
+        <div>Nos vemos</div>
+        <div>Nos vemos</div>
+    </div>
+    <h1>Ejercicio 15</h1>
+    <nav>
+        <a href="#">Mecago.com</a>
+    </nav>
+    <h1>Ejercicio 16</h1>
+    <span>Está al principio de la página</span>
+    <h1>Ejercicio 17</h1>
+    <img id="imagen" src="../ProyectoWeb-Alumnos/img/equipo1.jpg">
+    <h1>Ejercicio 18</h1>
+    <div class="productos">Producto</div>
+    <div class="productos">Producto</div>
+    <div class="productos">Producto</div>
+    <h1>Ejercicio 19</h1>
+    <input id="nombre">
+    <h1>Ejercicio 20</h1>
+    <div>Se ha añadido un título al head</div>
+    <script>
+        $(document).ready(function () {
+            //1. Revisión del DOM y Ejecución del Código jQuery
+            //Ejercicios:
+            //Ejercicio 1
+            //1-Selecciona el elemento con la clase . item y cambiale el texto.
+            $('.item').text('Nuevo texto');
+            //Ejericio 2
+            //2-Selecciona el primer elemento con la clase .producto y cambia su color de fondo a azul.
+            $('.producto:first').css('background-color', 'blue');
+            //Ejericio 3
+            //3-Accede al primer <div> de la página y agrega el texto "Hola Mundo".
+            $('div:first').append(', Hola Mundo');
+            //Ejercicio 4
+            //4-Selecciona el elemento con id #titulo y cambia su color a rojo.
+            $('#titulo').css('color', 'red');
+            //Ejercicio 5
+            //5-Accede a todos los elementos <p> en la página y cambia su tamaño de fuente a 18px.
+            $('p').css('font-size', '18px');
+            //Ejercicio 6
+            //6-Añade un nuevo elemento <li> al final de una lista con id #lista.
+            $('#lista').append('<li>Tres</li>');
+            //Ejercicio 7
+            //7-Accede al contenido del elemento con id #descripcion y muestra el valor en consola.
+            $('#descripcion').keypress(function (e) {
+                console.log($(this).val());
+            });
+            //Ejercicio 8
+            //8-Obtén todos los elementos con la clase .carta y cambia su color de borde a verde.
+            $('.carta').css('border', '2px solid green');
+            //Ejercicio 9
+            //9-Elimina todos los elementos con la clase .eliminar.
+            $('.eliminar').remove('');
+            //Ejercicio 10
+            //10-Selecciona todos los <span> dentro de un <div> con id #contenedor y cambia su color de fondo a gris.
+            $('#contenedor>span').css('background-color', 'grey');
+            //2. Funciones de DOM
+
+            //Ejercicios:
+            //Ejercicio 11
+            //11-Selecciona todos los elementos con la clase .foto y ocúltalos.
+            $('.foto').hide('');
+            //Ejercicio 12
+            //12-Añade un borde rojo a todos los elementos <h1> dentro de un <div>.
+            $('div>h1').css('border', '2px solid red');
+            //Ejercicio 13
+            //13-Accede a todos los elementos de tipo <input> y establece su valor como "Texto predeterminado".
+            $('input').val('Texto predeterminado');
+            //Ejercicio 14
+            //14-Selecciona el segundo <div> en el documento y cámbiale el fondo a amarillo.
+            $('.orden>div:eq(1)').css('background-color', 'yellow');
+            //Ejercicio 15
+            //15-Añade un class llamado activo a todos los <a> dentro de un <nav>.
+            $('nav>a').addClass('activo');
+            //Ejercicio 16
+            //16-Inserta un nuevo párrafo al principio del <body> con el texto "Bienvenido".
+            $('body').prepend('Bienvenido');
+            //Ejercicio 17
+            //17-Cambiar el src de una imagen con id #imagen a una nueva URL.
+            $('#imagen').attr('src', '../ProyectoWeb-Alumnos/img/equipo3.jpg');
+            //Ejercicio 18
+            //18-Establece un atributo data-id en todos los elementos con la clase .producto.
+            for (let i = 0; i < $(".productos").length; i++) {
+                $(".productos:eq(" + i + ")").attr("data-id", i);
+            }
+            //Ejercicio 19
+            //19-Cambiar el valor de un <input> con id #nombre a "Juan Pérez".
+            $('#nombre').val('Juan Pérez');
+            //Ejercicio 20
+            //20-Añadir un título en el <head> que diga "Página Web Interactiva".
+            $('head').append('<title>Página Web Interactiva</title>');
+        });
+    </script>
+</body>
+
+</html>
