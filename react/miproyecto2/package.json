@@ -1,5 +1,5 @@
 {
-  "name": "miproyecto1",
+  "name": "miproyecto2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,8 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.17.1",
     "react": "^19.0.0",
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
