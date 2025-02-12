@@ -1,5 +1,4 @@
 import React from 'react';
-import Puntuacion from './Puntuacion';
 
 export default function LineaPuntuacion({etiqueta, id, numero}) {
     return (
