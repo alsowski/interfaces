@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Mensaje() {
+export default function Mensaje(props) {
     return (
-        <p>Empiece a adivinar...</p>
+        <p>{props.mensaje}</p>
     )
 }

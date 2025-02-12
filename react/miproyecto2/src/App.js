@@ -15,6 +15,7 @@ function App() {
     setNumSecreto(generarNumSecreto);
     setMensaje("Empiece adivinar...");
     setPuntuacion(20);
+    document.body.style.backgroundColor="";
   }
 
   const comparar =(numero)=>{
@@ -23,7 +24,11 @@ function App() {
     } else if (Number(numero)== numSecreto){
       setMensaje("Ganaste");
       document.body.style.backgroundColor="green";
-      if (score>puntuacion){
+      if (score<puntuacion){
+        setScore(puntuacion);
+      }
+
+      if (score>puntuacion) {
         setScore(puntuacion);
       }
 
@@ -35,10 +40,12 @@ function App() {
       setMensaje("Tu número es alto");
       setPuntuacion (puntuacion-1);
     }
+    var cont = 0;
     if (puntuacion==0) {
-      setMensaje ("Perdiste");
-      document.bosy.style.backgroundColor="red";
-    }
+      setMensaje ("Perdiste. Reiniciar para volver a intentar");
+      document.body.style.backgroundColor="red";
+      setPuntuacion (0);
+      }
   }
 
   const [numSecreto, setNumSecreto] = useState(generarNumSecreto);
@@ -48,12 +55,12 @@ function App() {
 
   return (
     <div className="container">
-      <Reiniciar reiniciar={reiniciar}/>{/*Botón Reiniciar*/}
-      <h1>¡Adivina mi número!</h1>
+      <Reiniciar reiniciar={reiniciar}/>
+      <h1>¡Adivina mi número! {numSecreto}</h1>
       <NumeroSecreto/>
       <br />
-      <Formulario/>
-      <Puntuacion/>
+      <Formulario comparar={comparar}/>
+      <Puntuacion mensaje={mensaje} puntuacion={puntuacion} score={score}/>
     </div>
   );
 }
