@@ -11,3 +11,7 @@ export default function Saludar({ setMostrarMensaje, comparar }) {
         </>
     )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 36d6ad8b9e6817ac247bb7fcaf66bc57d31c0d31

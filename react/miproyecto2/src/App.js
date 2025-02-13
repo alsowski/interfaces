@@ -40,7 +40,7 @@ function App() {
       setMensaje("Tu número es alto");
       setPuntuacion (puntuacion-1);
     }
-    var cont = 0;
+    
     if (puntuacion==0) {
       setMensaje ("Perdiste. Reiniciar para volver a intentar");
       document.body.style.backgroundColor="red";
